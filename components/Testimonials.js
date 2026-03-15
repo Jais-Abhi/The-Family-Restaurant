@@ -23,16 +23,16 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="py-24 bg-white dark:bg-charcoal text-foreground dark:text-white overflow-hidden">
+    <section className="py-16 md:py-24 bg-white text-black overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 text-center">
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          className="mb-16"
+          className="mb-12 md:mb-16"
         >
-          <Quote className="mx-auto text-accent mb-6" size={48} />
-          <h2 className="text-4xl md:text-5xl font-serif">What Our Guests Say</h2>
+          <Quote className="mx-auto text-accent mb-4 md:mb-6" size={32} />
+          <h2 className="text-3xl md:text-5xl font-serif">What Our Guests Say</h2>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
@@ -43,14 +43,14 @@ export default function Testimonials() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.2 }}
-              className="p-10 border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-charcoal/50 flex flex-col items-center rounded-lg"
+              className="p-8 md:p-10 border border-gray-200 bg-gray-50 flex flex-col items-center rounded-lg"
             >
-              <p className="text-black/70 dark:text-white/70 leading-relaxed italic mb-8 font-light text-lg">
+              <p className="text-black/70 leading-relaxed italic mb-6 md:mb-8 font-light text-base md:text-lg">
                 &ldquo;{t.text}&rdquo;
               </p>
               <div className="mt-auto">
                 <h4 className="font-serif text-accent text-xl mb-1">{t.author}</h4>
-                <p className="text-black/40 dark:text-white/40 text-xs uppercase tracking-widest">{t.role}</p>
+                <p className="text-black/40 text-xs uppercase tracking-widest">{t.role}</p>
               </div>
             </motion.div>
           ))}

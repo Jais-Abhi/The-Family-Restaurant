@@ -23,22 +23,22 @@ export default function GalleryPage() {
   const [selectedImg, setSelectedImg] = useState(null);
 
   return (
-    <main className="bg-white dark:bg-black text-black dark:text-white pt-32 pb-24">
+    <main className="bg-white text-black pt-24 md:pt-32 pb-16 md:pb-24">
       <Navbar />
-      
+
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <header className="text-center mb-16">
-          <m.h1 
+        <header className="text-center mb-12 md:mb-16">
+          <m.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-5xl md:text-7xl font-serif mb-6 text-black dark:text-white"
+            className="text-4xl md:text-7xl font-serif mb-4 md:mb-6 text-black"
           >
             Visual Experience
           </m.h1>
-          <p className="text-black/70 dark:text-white/70 tracking-widest uppercase text-sm">A glimpse into our world</p>
+          <p className="text-black/70 tracking-widest uppercase text-[10px] md:text-sm">A glimpse into our world</p>
         </header>
 
-        <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
+        <div className="columns-1 md:columns-2 lg:columns-3 gap-4 md:gap-6 space-y-4 md:space-y-6">
           {images.map((img) => (
             <m.div
               key={img.id}
@@ -57,7 +57,7 @@ export default function GalleryPage() {
                 className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                <span className="text-white border border-white px-6 py-2 uppercase tracking-widest text-xs">View</span>
+                <span className="text-white border border-white px-4 py-1 md:px-6 md:py-2 uppercase tracking-widest text-[10px] md:text-xs">View</span>
               </div>
             </m.div>
           ))}
@@ -66,7 +66,7 @@ export default function GalleryPage() {
 
       {/* Lightbox */}
       {selectedImg && (
-        <m.div 
+        <m.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           className="fixed inset-0 z-[100] bg-black/95 flex items-center justify-center p-6"
@@ -75,7 +75,7 @@ export default function GalleryPage() {
           <button className="absolute top-10 right-10 text-white hover:text-accent transition-colors">
             <X size={40} />
           </button>
-          <m.div 
+          <m.div
             initial={{ scale: 0.9 }}
             animate={{ scale: 1 }}
             className="relative max-w-5xl max-h-[80vh] w-full h-full"
