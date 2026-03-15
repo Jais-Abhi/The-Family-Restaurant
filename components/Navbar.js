@@ -37,8 +37,8 @@ export default function Navbar() {
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (
-        isOpen && 
-        mobileMenuRef.current && 
+        isOpen &&
+        mobileMenuRef.current &&
         !mobileMenuRef.current.contains(event.target) &&
         !menuButtonRef.current.contains(event.target)
       ) {
@@ -56,7 +56,7 @@ export default function Navbar() {
 
   useEffect(() => {
     const isMobile = window.innerWidth < 768;
-    const padding = isMobile 
+    const padding = isMobile
       ? (scrolled || pathname !== "/" ? "0.6rem" : "0.8rem")
       : (scrolled || pathname !== "/" ? "1rem" : "1.5rem");
 
@@ -64,8 +64,8 @@ export default function Navbar() {
       paddingTop: padding,
       paddingBottom: padding,
       backdropFilter: (scrolled || pathname !== "/") ? "blur(10px)" : "blur(0px)",
-      borderBottom: (scrolled || pathname !== "/") 
-        ? "1px solid rgba(212, 175, 55, 0.2)" 
+      borderBottom: (scrolled || pathname !== "/")
+        ? "1px solid rgba(212, 175, 55, 0.2)"
         : "1px solid rgba(212, 175, 55, 0)",
       duration: 0.4,
       ease: "power2.out",
@@ -134,10 +134,10 @@ export default function Navbar() {
             animate={{ clipPath: "circle(150% at 100% 0%)" }}
             exit={{ clipPath: "circle(0% at 100% 0%)" }}
             transition={{ type: "spring", stiffness: 40, damping: 15 }}
-            className="fixed top-0 right-0 w-[90vw] h-[90vw] max-w-[400px] max-h-[400px] bg-white z-[110] md:hidden flex flex-col items-end justify-start space-y-[5px] pt-20 pr-8 rounded-bl-full shadow-[0_20px_50px_rgba(0,0,0,0.1)] border-l border-b border-accent/10"
+            className="fixed top-0 right-0 w-[90vw] h-[90vw] max-w-[440px] max-h-[440px] bg-white z-[110] md:hidden flex flex-col items-start justify-start space-y-3 pt-4 pl-4 rounded-bl-full shadow-[0_20px_50px_rgba(0,0,0,0.1)] border-l border-b border-accent/10"
           >
             {/* Close Button inside menu */}
-            <button 
+            <button
               onClick={() => setIsOpen(false)}
               className="absolute top-8 right-8 text-black"
             >
@@ -147,15 +147,16 @@ export default function Navbar() {
             {navLinks.map((link, i) => (
               <motion.div
                 key={link.name}
-                initial={{ opacity: 0, x: 20 }}
+                initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.2 + i * 0.05 }}
+                style={{ marginLeft: `${i * 32}px` }}
               >
                 <Link
                   href={link.href}
                   onClick={() => setIsOpen(false)}
                   className={cn(
-                    "relative text-sm font-serif font-bold tracking-widest uppercase px-5 py-2 rounded-full transition-all duration-300",
+                    "relative text-xl font-serif font-bold tracking-widest uppercase px-6 py-2.5 rounded-full transition-all duration-300",
                     pathname === link.href ? "text-white" : "text-black"
                   )}
                 >
@@ -171,15 +172,16 @@ export default function Navbar() {
               </motion.div>
             ))}
             <motion.div
-              initial={{ opacity: 0, x: 20 }}
+              initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.2 + navLinks.length * 0.05 }}
-              className="pt-2"
+              className="pt-4"
+              style={{ marginLeft: `${navLinks.length * 28}px` }}
             >
               <Link
                 href="/reservation"
                 onClick={() => setIsOpen(false)}
-                className="px-8 py-3 bg-accent text-charcoal font-bold uppercase tracking-widest text-xs"
+                className="px-10 py-3.5 bg-gradient-to-br from-accent to-[#B8860B] text-black font-black uppercase tracking-[0.2em] text-[10px] rounded-full shadow-[0_10px_30px_rgba(212,175,55,0.4)] hover:shadow-[0_15px_35px_rgba(184,134,11,0.5)] hover:scale-105 transition-all duration-300 active:scale-95 inline-block"
               >
                 Book a Table
               </Link>
