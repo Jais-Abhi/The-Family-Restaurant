@@ -68,7 +68,7 @@ export default function MenuPage() {
     : menuItems.filter(item => item.category === activeCategory);
 
   return (
-    <main className="pt-32 pb-24 bg-white dark:bg-black text-black dark:text-white">
+    <main className="pt-32 pb-24 bg-white text-black">
       <Navbar />
       
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
@@ -76,27 +76,27 @@ export default function MenuPage() {
           <motion.span
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            className="text-accent uppercase tracking-[0.4em] text-sm mb-4 block"
+            className="text-accent uppercase tracking-[0.2em] md:tracking-[0.4em] text-[10px] md:text-sm mb-3 md:mb-4 block"
           >
             Exquisite Selection
           </motion.span>
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-5xl md:text-7xl font-serif mb-8 text-black dark:text-white"
+            className="text-4xl md:text-7xl font-serif mb-6 md:mb-8 text-black"
           >
             The Culinary Menu
           </motion.h1>
           <div className="w-24 h-[1px] bg-accent mx-auto mb-12" />
 
           {/* Categories */}
-          <div className="flex flex-wrap justify-center gap-4 md:gap-8">
+          <div className="flex flex-wrap justify-center gap-2 md:gap-8">
             {categories.map((cat) => (
               <button
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
-                className={`text-sm uppercase tracking-widest transition-all px-4 py-2 border-b-2 ${
-                  activeCategory === cat ? "border-accent text-accent" : "border-transparent text-black/60 dark:text-white/60 hover:text-black dark:hover:text-white"
+                className={`text-[10px] md:text-sm uppercase tracking-widest transition-all px-3 py-1 md:px-4 md:py-2 border-b-2 ${
+                  activeCategory === cat ? "border-accent text-accent" : "border-transparent text-black/60 hover:text-black"
                 }`}
               >
                 {cat}

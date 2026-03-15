@@ -2,8 +2,6 @@ import { Playfair_Display, Inter } from "next/font/google";
 import "./globals.css";
 import SmoothScroll from "@/components/SmoothScroll";
 import NavigationLoader from "@/components/NavigationLoader";
-import ThemeToggle from "@/components/ThemeToggle";
-import { ThemeProvider } from "@/context/ThemeContext";
 
 const playfair = Playfair_Display({
   variable: "--font-playfair",
@@ -22,18 +20,15 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" style={{ backgroundColor: 'white' }} suppressHydrationWarning>
       <body
-        className={`${playfair.variable} ${inter.variable} font-sans antialiased bg-white dark:bg-black text-black dark:text-white overflow-x-hidden transition-colors duration-300`}
+        className={`${playfair.variable} ${inter.variable} font-sans antialiased bg-white text-black`}
       >
-        <ThemeProvider>
-          <NavigationLoader>
-            <ThemeToggle />
-            <SmoothScroll>
-              {children}
-            </SmoothScroll>
-          </NavigationLoader>
-        </ThemeProvider>
+        <NavigationLoader>
+          <SmoothScroll>
+            {children}
+          </SmoothScroll>
+        </NavigationLoader>
       </body>
     </html>
   );
