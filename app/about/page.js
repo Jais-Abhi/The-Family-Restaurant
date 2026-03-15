@@ -30,7 +30,7 @@ export default function AboutPage() {
   }, []);
 
   return (
-    <main className="bg-background">
+    <main className="bg-white dark:bg-black text-black dark:text-white">
       <Navbar />
       
       {/* Hero */}
@@ -60,12 +60,12 @@ export default function AboutPage() {
            viewport={{ once: true }}
         >
           <span className="text-accent uppercase tracking-widest text-sm mb-4 block">The Beginning</span>
-          <h2 className="text-4xl font-serif mb-8">From a Small Kitchen to Culinary Excellence</h2>
-          <p className="text-muted-foreground leading-relaxed text-lg mb-6">
+          <h2 className="text-4xl font-serif mb-8 text-black dark:text-white">From a Small Kitchen to Culinary Excellence</h2>
+          <p className="text-black/70 dark:text-white/70 leading-relaxed text-lg mb-6">
             L&apos;Élégance was founded by Chef Alberto Russo in 1995. What started as a modest 10-table 
             bistro has evolved into a world-renowned fine dining destination.
           </p>
-          <p className="text-muted-foreground leading-relaxed text-lg">
+          <p className="text-black/70 dark:text-white/70 leading-relaxed text-lg">
             Our commitment to the &ldquo;Farm to Fork&rdquo; philosophy means we partner with local artisans 
             and sustainable farms to bring the freshest ingredients to your table.
           </p>
@@ -89,9 +89,9 @@ export default function AboutPage() {
       </section>
 
       {/* Team */}
-      <section className="py-24 bg-secondary/20">
+      <section className="py-24 bg-gray-50 dark:bg-charcoal text-black dark:text-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
-          <h2 className="text-4xl font-serif text-center mb-16">Meet the Masters</h2>
+          <h2 className="text-4xl font-serif text-center mb-16 text-black dark:text-white">Meet the Masters</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             {[1, 2, 3].map((i) => (
               <motion.div 

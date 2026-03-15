@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function RestaurantStory() {
   return (
-    <section className="py-24 bg-secondary/30 relative overflow-hidden">
+    <section className="py-24 bg-gray-50 dark:bg-charcoal relative overflow-hidden text-black dark:text-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         <motion.div
           initial={{ opacity: 0, x: -50 }}
@@ -34,12 +34,12 @@ export default function RestaurantStory() {
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <span className="text-primary uppercase tracking-[0.3em] text-sm font-semibold mb-6 block">Our Legacy</span>
-          <h2 className="text-4xl md:text-5xl font-serif mb-8 leading-tight">
+          <span className="text-accent uppercase tracking-[0.3em] text-sm font-semibold mb-6 block">Our Legacy</span>
+          <h2 className="text-4xl md:text-5xl font-serif mb-8 leading-tight text-black dark:text-white">
             A Journey of Flavors, <br />
             Crafted Since 1995
           </h2>
-          <div className="space-y-6 text-muted-foreground leading-relaxed text-lg font-light">
+          <div className="space-y-6 text-black/70 dark:text-white/70 leading-relaxed text-lg font-light">
             <p>
               L&apos;Élégance was born out of a desire to create a sanctuary where culinary excellence 
               and refined atmosphere meet. Our story began twenty years ago in a small kitchen 
@@ -53,7 +53,7 @@ export default function RestaurantStory() {
           </div>
           <Link 
             href="/about" 
-            className="mt-10 inline-block px-8 py-3 bg-charcoal text-white font-bold uppercase tracking-widest text-xs hover:bg-primary transition-all duration-300"
+            className="mt-10 inline-block px-8 py-3 bg-black dark:bg-white text-white dark:text-black font-bold uppercase tracking-widest text-xs hover:bg-accent transition-all duration-300"
           >
             Discover More
           </Link>

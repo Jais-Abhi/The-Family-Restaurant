@@ -16,7 +16,7 @@ export default function ChefSpecial() {
   const scale = useTransform(scrollYProgress, [0, 0.5], [0.8, 1]);
 
   return (
-    <section ref={containerRef} className="py-24 bg-charcoal text-white overflow-hidden relative">
+    <section ref={containerRef} className="py-24 bg-white dark:bg-charcoal text-foreground dark:text-white overflow-hidden relative">
       {/* Background Decorative Text */}
       <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center pointer-events-none opacity-5">
         <h2 className="text-[20vw] font-serif font-bold whitespace-nowrap">SIGNATURE</h2>
@@ -54,11 +54,11 @@ export default function ChefSpecial() {
           <Reveal delay={0.4}>
             <h2 className="text-5xl md:text-7xl font-serif leading-tight">
               Chef&apos;s Signature <br />
-              <span className="italic text-white/80">Heritage Steak</span>
+              <span className="italic text-foreground/80 dark:text-white/80">Heritage Steak</span>
             </h2>
           </Reveal>
           <Reveal delay={0.5}>
-            <p className="text-white/60 text-lg font-light leading-relaxed max-w-lg">
+            <p className="text-foreground/60 dark:text-white/60 text-lg font-light leading-relaxed max-w-lg">
               Our Chef&apos;s Signature dish features a rare 45-day dry-aged tomahawk, 
               seasoned with hand-harvested sea salt and smoked with rosemary-infused 
               oak. It is a testament to our culinary heritage.
@@ -68,7 +68,7 @@ export default function ChefSpecial() {
           <Reveal delay={0.6}>
             <ul className="space-y-4">
               {["45-Day Dry Aged", "Sustainability Sourced", "Signature Oak Smoke"].map((item, i) => (
-                <li key={item} className="flex items-center gap-4 text-white/80">
+                <li key={item} className="flex items-center gap-4 text-foreground/80 dark:text-white/80">
                   <div className="w-2 h-2 rounded-full bg-accent" />
                   <span className="uppercase tracking-widest text-xs font-medium">{item}</span>
                 </li>
@@ -77,7 +77,7 @@ export default function ChefSpecial() {
           </Reveal>
 
           <Reveal delay={0.7}>
-            <button className="px-12 py-5 bg-white text-charcoal font-bold uppercase tracking-[0.3em] text-[10px] hover:bg-accent transition-colors duration-500">
+            <button className="px-12 py-5 bg-foreground dark:bg-white text-white dark:text-charcoal font-bold uppercase tracking-[0.3em] text-[10px] hover:bg-accent transition-colors duration-500">
               Reserve This Dish
             </button>
           </Reveal>

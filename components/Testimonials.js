@@ -23,7 +23,7 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="py-24 bg-charcoal text-white overflow-hidden">
+    <section className="py-24 bg-white dark:bg-charcoal text-foreground dark:text-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 text-center">
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
@@ -43,14 +43,14 @@ export default function Testimonials() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.2 }}
-              className="p-10 border border-white/10 glass-dark flex flex-col items-center"
+              className="p-10 border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-charcoal/50 flex flex-col items-center rounded-lg"
             >
-              <p className="text-white/80 leading-relaxed italic mb-8 font-light text-lg">
+              <p className="text-black/70 dark:text-white/70 leading-relaxed italic mb-8 font-light text-lg">
                 &ldquo;{t.text}&rdquo;
               </p>
               <div className="mt-auto">
                 <h4 className="font-serif text-accent text-xl mb-1">{t.author}</h4>
-                <p className="text-white/40 text-xs uppercase tracking-widest">{t.role}</p>
+                <p className="text-black/40 dark:text-white/40 text-xs uppercase tracking-widest">{t.role}</p>
               </div>
             </motion.div>
           ))}

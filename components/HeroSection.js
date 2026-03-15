@@ -90,15 +90,15 @@ export default function HeroSection() {
         
         <h1 
           ref={titleRef}
-          className="text-6xl md:text-8xl lg:text-9xl font-serif text-white mb-8 leading-tight"
+          className="text-6xl md:text-8xl lg:text-9xl font-serif text-black dark:text-white mb-8 leading-tight"
         >
           L&apos;Élégance <br />
-          <span className="text-white/80 italic font-light">Fine Dining</span>
+          <span className="text-black/70 dark:text-white/70 italic font-light">Fine Dining</span>
         </h1>
 
         <p 
           ref={subtitleRef}
-          className="text-lg md:text-xl text-white/70 max-w-2xl mx-auto mb-12 font-light leading-relaxed"
+          className="text-lg md:text-xl text-foreground/70 dark:text-white/70 max-w-2xl mx-auto mb-12 font-light leading-relaxed"
         >
           Where art meets the plate. Experience the finest contemporary cuisine 
           crafted with passion and served with perfection.
@@ -107,7 +107,7 @@ export default function HeroSection() {
         <div ref={buttonsRef} className="flex flex-col sm:flex-row items-center justify-center gap-6">
           <Link 
             href="/menu" 
-            className="group relative px-10 py-4 bg-primary text-white overflow-hidden transition-all duration-500"
+            className="group relative px-10 py-4 bg-primary text-foreground dark:text-white overflow-hidden transition-all duration-500"
           >
             <span className="relative z-10 font-bold uppercase tracking-widest text-sm">Explore Menu</span>
             <div className="absolute inset-0 bg-accent translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
@@ -115,7 +115,7 @@ export default function HeroSection() {
           
           <Link 
             href="/reservation" 
-            className="px-10 py-4 border border-white/30 text-white hover:bg-white hover:text-charcoal transition-all duration-500 font-bold uppercase tracking-widest text-sm"
+            className="px-10 py-4 border border-foreground/30 dark:border-white/30 text-foreground dark:text-white hover:bg-foreground dark:hover:bg-white hover:text-white dark:hover:text-charcoal transition-all duration-500 font-bold uppercase tracking-widest text-sm"
           >
             Book a Table
           </Link>
@@ -129,7 +129,7 @@ export default function HeroSection() {
         transition={{ delay: 2, duration: 1 }}
         className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
       >
-        <span className="text-white/40 text-[10px] uppercase tracking-[0.3em]">Scroll</span>
+        <span className="text-foreground/40 dark:text-white/40 text-[10px] uppercase tracking-[0.3em]">Scroll</span>
         <div className="w-[1px] h-12 bg-gradient-to-b from-accent to-transparent" />
       </motion.div>
     </section>

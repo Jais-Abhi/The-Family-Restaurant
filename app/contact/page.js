@@ -7,7 +7,7 @@ import { MapPin, Phone, Mail, Clock, Send } from "lucide-react";
 
 export default function ContactPage() {
   return (
-    <main className="bg-background pt-32">
+    <main className="bg-white dark:bg-black text-black dark:text-white pt-32">
       <Navbar />
       
       <div className="max-w-7xl mx-auto px-6 lg:px-12 pb-24">
@@ -15,7 +15,7 @@ export default function ContactPage() {
           <motion.h1 
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="text-5xl md:text-7xl font-serif mb-6"
+            className="text-5xl md:text-7xl font-serif mb-6 text-black dark:text-white"
           >
             Get In Touch
           </motion.h1>
@@ -30,10 +30,10 @@ export default function ContactPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
             >
-              <h3 className="text-2xl font-serif mb-6 flex items-center gap-3">
+              <h3 className="text-2xl font-serif mb-6 flex items-center gap-3 text-black dark:text-white">
                 <MapPin className="text-accent" /> Location
               </h3>
-              <p className="text-muted-foreground leading-relaxed font-light">
+              <p className="text-black/70 dark:text-white/70 leading-relaxed font-light">
                 123 Culinary Avenue, <br />
                 Gourmet City, GC 54321 <br />
                 United States
@@ -45,10 +45,10 @@ export default function ContactPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
             >
-              <h3 className="text-2xl font-serif mb-6 flex items-center gap-3">
+              <h3 className="text-2xl font-serif mb-6 flex items-center gap-3 text-black dark:text-white">
                 <Phone className="text-accent" /> Reservations
               </h3>
-              <p className="text-muted-foreground leading-relaxed font-light">
+              <p className="text-black/70 dark:text-white/70 leading-relaxed font-light">
                 +1 (234) 567-8900 <br />
                 +1 (234) 567-8901
               </p>
@@ -62,9 +62,9 @@ export default function ContactPage() {
               <h3 className="text-2xl font-serif mb-6 flex items-center gap-3">
                 <Clock className="text-accent" /> Opening Hours
               </h3>
-              <div className="text-muted-foreground leading-relaxed font-light space-y-2">
-                <p><span className="text-foreground">Mon - Fri:</span> 11:00 AM - 11:00 PM</p>
-                <p><span className="text-foreground">Sat - Sun:</span> 10:00 AM - 12:00 AM</p>
+              <div className="text-black/70 dark:text-white/70 leading-relaxed font-light space-y-2">
+                <p><span className="text-black dark:text-white">Mon - Fri:</span> 11:00 AM - 11:00 PM</p>
+                <p><span className="text-black dark:text-white">Sat - Sun:</span> 10:00 AM - 12:00 AM</p>
               </div>
             </motion.div>
           </div>
@@ -76,26 +76,26 @@ export default function ContactPage() {
             transition={{ delay: 0.4 }}
             className="lg:col-span-2"
           >
-            <form className="p-8 md:p-12 bg-secondary/20 shadow-sm space-y-8">
+            <form className="p-8 md:p-12 bg-gray-50 dark:bg-charcoal shadow-sm space-y-8">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div className="space-y-2">
                   <label className="text-xs uppercase tracking-widest font-bold">Your Name</label>
-                  <input type="text" className="w-full bg-white border border-border p-4 outline-none focus:border-accent transition-all" />
+                  <input type="text" className="w-full bg-white dark:bg-charcoal border border-gray-200 dark:border-gray-700 p-4 outline-none focus:border-accent transition-all text-black dark:text-white" />
                 </div>
                 <div className="space-y-2">
                   <label className="text-xs uppercase tracking-widest font-bold">Email Address</label>
-                  <input type="email" className="w-full bg-white border border-border p-4 outline-none focus:border-accent transition-all" />
+                  <input type="email" className="w-full bg-white dark:bg-charcoal border border-gray-200 dark:border-gray-700 p-4 outline-none focus:border-accent transition-all text-black dark:text-white" />
                 </div>
               </div>
               <div className="space-y-2">
                 <label className="text-xs uppercase tracking-widest font-bold">Subject</label>
-                <input type="text" className="w-full bg-white border border-border p-4 outline-none focus:border-accent transition-all" />
+                <input type="text" className="w-full bg-white dark:bg-charcoal border border-gray-200 dark:border-gray-700 p-4 outline-none focus:border-accent transition-all text-black dark:text-white" />
               </div>
               <div className="space-y-2">
                 <label className="text-xs uppercase tracking-widest font-bold">Message</label>
-                <textarea rows="6" className="w-full bg-white border border-border p-4 outline-none focus:border-accent transition-all resize-none"></textarea>
+                <textarea rows="6" className="w-full bg-white dark:bg-charcoal border border-gray-200 dark:border-gray-700 p-4 outline-none focus:border-accent transition-all resize-none text-black dark:text-white"></textarea>
               </div>
-              <button className="flex items-center justify-center gap-3 w-full py-5 bg-charcoal text-white font-bold uppercase tracking-[0.2em] hover:bg-primary transition-all duration-300">
+              <button className="flex items-center justify-center gap-3 w-full py-5 bg-black dark:bg-white text-white dark:text-black font-bold uppercase tracking-[0.2em] hover:bg-accent transition-all duration-300">
                 Send Message <Send size={18} />
               </button>
             </form>

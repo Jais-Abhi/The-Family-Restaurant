@@ -33,9 +33,10 @@ export default function Navbar() {
   }, []);
 
   useEffect(() => {
+    const isDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
     if (scrolled || pathname !== "/") {
       gsap.to(navRef.current, {
-        backgroundColor: "#000000",
+        backgroundColor: isDark ? "#000000" : "#ffffff",
         paddingTop: "1rem",
         paddingBottom: "1rem",
         backdropFilter: "blur(10px)",
@@ -76,7 +77,7 @@ export default function Navbar() {
               href={link.href}
               className={cn(
                 "text-sm font-medium tracking-widest uppercase transition-colors hover:text-accent",
-                pathname === link.href ? "text-accent" : "text-white/80"
+                pathname === link.href ? "text-accent" : "text-black dark:text-white"
               )}
             >
               {link.name}
@@ -92,7 +93,7 @@ export default function Navbar() {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-white"
+          className="md:hidden text-foreground dark:text-white"
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? <X size={28} /> : <Menu size={28} />}
@@ -106,7 +107,7 @@ export default function Navbar() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="fixed inset-0 top-[64px] bg-black backdrop-blur-xl z-40 md:hidden flex flex-col items-center justify-center space-y-8"
+            className="fixed inset-0 top-[64px] bg-white dark:bg-black backdrop-blur-xl z-40 md:hidden flex flex-col items-center justify-center space-y-8"
           >
             {navLinks.map((link) => (
               <Link
@@ -115,7 +116,7 @@ export default function Navbar() {
                 onClick={() => setIsOpen(false)}
                 className={cn(
                   "text-2xl font-serif tracking-widest uppercase",
-                  pathname === link.href ? "text-accent" : "text-white"
+                  pathname === link.href ? "text-accent" : "text-foreground dark:text-white"
                 )}
               >
                 {link.name}

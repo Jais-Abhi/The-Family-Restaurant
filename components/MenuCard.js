@@ -47,7 +47,7 @@ export default function MenuCard({ item }) {
         rotateY,
         transformStyle: "preserve-3d",
       }}
-      className="group relative p-4 border border-border bg-card hover:border-accent/40 transition-shadow hover:shadow-2xl"
+      className="group relative p-4 border border-gray-200 dark:border-gray-700 bg-white dark:bg-charcoal hover:border-accent/40 transition-shadow hover:shadow-2xl"
     >
       <div 
         style={{ transform: "translateZ(75px)", transformStyle: "preserve-3d" }}
@@ -64,10 +64,10 @@ export default function MenuCard({ item }) {
       
       <div style={{ transform: "translateZ(50px)" }}>
         <div className="flex justify-between items-start mb-2">
-          <h3 className="text-xl font-serif">{item.name}</h3>
+          <h3 className="text-xl font-serif text-black dark:text-white">{item.name}</h3>
           <span className="text-accent font-serif text-lg">{item.price}</span>
         </div>
-        <p className="text-muted-foreground text-sm font-light leading-relaxed">
+        <p className="text-black/60 dark:text-white/60 text-sm font-light leading-relaxed">
           {item.description}
         </p>
       </div>

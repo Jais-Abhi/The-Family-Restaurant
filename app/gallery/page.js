@@ -23,7 +23,7 @@ export default function GalleryPage() {
   const [selectedImg, setSelectedImg] = useState(null);
 
   return (
-    <main className="bg-background pt-32 pb-24">
+    <main className="bg-white dark:bg-black text-black dark:text-white pt-32 pb-24">
       <Navbar />
       
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
@@ -31,11 +31,11 @@ export default function GalleryPage() {
           <m.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-5xl md:text-7xl font-serif mb-6"
+            className="text-5xl md:text-7xl font-serif mb-6 text-black dark:text-white"
           >
             Visual Experience
           </m.h1>
-          <p className="text-muted-foreground tracking-widest uppercase text-sm">A glimpse into our world</p>
+          <p className="text-black/70 dark:text-white/70 tracking-widest uppercase text-sm">A glimpse into our world</p>
         </header>
 
         <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
