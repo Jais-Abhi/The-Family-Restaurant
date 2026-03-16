@@ -34,9 +34,9 @@ export default function ContactPage() {
                 <MapPin className="text-accent" size={20} /> Location
               </h3>
               <p className="text-black/70 leading-relaxed font-light text-sm md:text-base">
-                123 Culinary Avenue, <br />
-                Gourmet City, GC 54321 <br />
-                United States
+                Gomti Nagar, <br />
+                Lucknow, UP 226010 <br />
+                India
               </p>
             </motion.div>
 
@@ -49,8 +49,8 @@ export default function ContactPage() {
                 <Phone className="text-accent" size={20} /> Reservations
               </h3>
               <p className="text-black/70 leading-relaxed font-light text-sm md:text-base">
-                +1 (234) 567-8900 <br />
-                +1 (234) 567-8901
+                +91 522 123 4567 <br />
+                +91 98765 43210
               </p>
             </motion.div>
 

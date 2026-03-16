@@ -40,7 +40,7 @@ export default function ReservationPage() {
               </div>
               <div>
                 <p className="text-black/40 text-[10px] uppercase tracking-widest">Call Us Directly</p>
-                <p className="text-lg md:text-xl font-serif text-black">+1 (234) 567-8900</p>
+                <p className="text-lg md:text-xl font-serif text-black">+91 522 123 4567</p>
               </div>
             </div>
             <div className="flex items-center gap-4">
@@ -121,7 +121,7 @@ export default function ReservationPage() {
                   <label className="text-black/60 text-[10px] md:text-xs uppercase tracking-widest flex items-center gap-2">
                     <Phone size={12} className="text-accent" /> Phone
                   </label>
-                  <input required type="tel" placeholder="+1 234 567 89" className="w-full bg-white border border-gray-200 p-3 md:p-4 text-sm md:text-base text-black focus:border-accent outline-none transition-all" />
+                  <input required type="tel" placeholder="+91 522 123 4567" className="w-full bg-white border border-gray-200 p-3 md:p-4 text-sm md:text-base text-black focus:border-accent outline-none transition-all" />
                 </div>
               </div>
               <div className="space-y-2">

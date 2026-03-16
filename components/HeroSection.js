@@ -116,7 +116,7 @@ export default function HeroSection() {
             href="/reservation" 
             className="px-8 md:px-10 py-3.5 md:py-4 border border-white/30 text-white hover:bg-white hover:text-black transition-all duration-500 font-bold uppercase tracking-widest text-xs md:text-sm w-full sm:w-auto text-center"
           >
-            Book a Table
+            Reserve
           </Link>
         </div>
       </div>
