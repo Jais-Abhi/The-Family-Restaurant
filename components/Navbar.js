@@ -13,7 +13,6 @@ const navLinks = [
   { name: "Menu", href: "/menu" },
   { name: "About", href: "/about" },
   { name: "Gallery", href: "/gallery" },
-  { name: "Reservation", href: "/reservation" },
   { name: "Contact", href: "/contact" },
 ];
 
@@ -110,7 +109,7 @@ export default function Navbar() {
               href="/reservation"
               className="px-6 py-2 bg-accent text-charcoal font-bold text-xs uppercase tracking-widest hover:bg-white transition-colors duration-300"
             >
-              Book a Table
+              Reserve
             </Link>
           </div>
 
@@ -183,7 +182,7 @@ export default function Navbar() {
                 onClick={() => setIsOpen(false)}
                 className="px-10 py-3.5 bg-gradient-to-br from-accent to-[#B8860B] text-black font-black uppercase tracking-[0.2em] text-[10px] rounded-full shadow-[0_10px_30px_rgba(212,175,55,0.4)] hover:shadow-[0_15px_35px_rgba(184,134,11,0.5)] hover:scale-105 transition-all duration-300 active:scale-95 inline-block"
               >
-                Book a Table
+                Reserve
               </Link>
             </motion.div>
           </motion.div>

@@ -10,14 +10,14 @@ const featuredDishes = [
     id: 1,
     name: "Wild Alaskan Salmon",
     description: "Pan-seared salmon with citrus glaze, asparagus, and saffron risotto.",
-    price: "$38",
+    price: "₹1,450",
     image: "/dish1.png",
   },
   {
     id: 2,
     name: "Truffle Ribeye Steak",
     description: "Premium black angus ribeye with truffle butter and honey-glazed carrots.",
-    price: "$52",
+    price: "₹2,200",
     image: "/dish2.png",
   },
 ];

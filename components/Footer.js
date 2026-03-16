@@ -48,11 +48,11 @@ export default function Footer() {
           <ul className="space-y-4 text-black/60">
             <li className="flex items-start space-x-3">
               <MapPin size={20} className="text-accent shrink-0 mt-1" />
-              <span>123 Culinary Avenue, Gourmet City, GC 54321</span>
+              <span>Gomti Nagar, Lucknow, <br />Uttar Pradesh 226010, India</span>
             </li>
             <li className="flex items-center space-x-3">
               <Phone size={20} className="text-accent shrink-0" />
-              <span>+1 (234) 567-8900</span>
+              <span>+91 522 123 4567</span>
             </li>
             <li className="flex items-center space-x-3">
               <Mail size={20} className="text-accent shrink-0" />
